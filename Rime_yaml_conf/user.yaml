@@ -1,0 +1,11 @@
+var:
+  last_build_time: 1524801682
+  option:
+    extended_charset: false
+    full_shape: false
+  previously_selected_schema: wubi_pinyin
+  schema_access_time:
+    double_pinyin_flypy: 1528339794
+    jap_poly: 1524801261
+    wubi86: 1504064791
+    wubi_pinyin: 1528339864

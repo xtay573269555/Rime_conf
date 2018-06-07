@@ -1,0 +1,67 @@
+abc_segmentor:
+  extra_tags:
+    - reverse_lookup
+customization: 424078279
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - r10n_translator
+    - reverse_lookup_translator
+key_binder:
+  import_preset: default
+punctuator:
+  import_preset: default
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*$"
+reverse_lookup:
+  dictionary: emoji
+  enable_completion: false
+  prefix: "`"
+  tips: "〔表情〕"
+schema:
+  author:
+    - "发明人 王永民先生"
+  dependencies:
+    - emoji
+  description: |
+    五笔字型86版
+    码表源自 ibus-table
+    敲 z 键进入拼音反查
+    
+  name: "五笔86"
+  schema_id: wubi86
+  version: 0.20.custom.424078279
+speller:
+  delimiter: " ;'"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: full_shape
+    states: ["半角", "全角"]
+translator:
+  dictionary: wubi86
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+  enable_charset_filter: true
+  enable_encoder: true
+  enable_sentence: true
+  encode_commit_history: true
+  max_phrase_length: 4

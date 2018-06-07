@@ -1,0 +1,43 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.9.30
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Wed Jun 21 15:15:09 2017"
+  rime_version: 1.1.2
+patch:
+  "style/display_tray_icon": true
+  "style/horizontal": false                    #横竖排
+  "style/font_face": "Microsoft YaHei Mono"    #微软雅黑
+  "style/font_point": 13                       #字号13
+  "style/color_scheme": me                  # 这项用于选中下面定义的方案
+  "preset_color_schemes/zfr":               # 在配色方案列表里加入标识为 zfr 的新方案
+    name: zfr 
+    author: zfr
+    back_color: 0x303030                    # 底色，24位色值，用十六进制书写方便些，顺序是蓝绿红0xBBGGRR，而不是普通的0xRRGGBB
+    border_color: 0x303030                  # 边框颜色，与底色相同则为无边框的效果
+    text_color: 0xc32c4a                    # 设定输入提示符的颜色
+    comment_text_color: 0x13f6f0            # 设定提示补全字母的颜色
+    hilited_back_color: 0x5c615d            # 设定高亮当前输入的那部分字母的底色
+    hilited_text_color: 0x000000            # 设定高亮当前输入那部份字母的颜色
+    hilited_comment_text_color: 0x5d5951
+    hilited_candidate_back_color: 0x9d9f9f  # 高亮候选项的底色
+    hilited_candidate_text_color: 0x8614cc  # 高亮候选项的文字颜色，要醒目！
+    candidate_text_color: 0xffffff          # 候选项文字颜色，当与文字颜色不同时指定
+    label_color: 0x0000ff
+
+  "style/color_scheme": me
+  "preset_color_schemes/me":
+    name: me 
+    author: me
+    back_color: 0x303030
+    border_color: 0x303030
+    text_color: 0x0000ff
+    comment_text_color: 0x13f6f0
+    hilited_text_color: 0xffffff
+    hilited_comment_text_color: 0x0bb0ea
+    hilited_candidate_text_color: 0x0000ff
+    candidate_text_color: 0xffffff
+
+app_options/cmd.exe:
+  ascii_mode: true
+
